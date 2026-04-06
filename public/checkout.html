@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout — Online Medicine Store</title>
+    <meta name="description" content="Secure checkout — COD, bKash, Nagad, Rocket." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="checkout" data-page-title="Checkout">
+    <div id="site-header-placeholder"></div>
+    <main id="main" class="container section">
+      <h1>Checkout</h1>
+      <div id="checkout-summary"></div>
+      <div id="checkout-msg"></div>
+      <form id="checkout-form" class="form-grid two" style="max-width: 44rem">
+        <div style="grid-column: 1 / -1">
+          <label for="cfull">Full name *</label>
+          <input id="cfull" name="guest_name" required minlength="2" autocomplete="name" />
+        </div>
+        <div>
+          <label for="cp">Phone *</label>
+          <input id="cp" name="guest_phone" required placeholder="01XXXXXXXXX" autocomplete="tel" />
+        </div>
+        <div>
+          <label for="ce">Email</label>
+          <input id="ce" name="guest_email" type="email" autocomplete="email" />
+        </div>
+        <div style="grid-column: 1 / -1">
+          <label for="ca">Shipping address *</label>
+          <textarea id="ca" name="shipping_address" required minlength="10" placeholder="House, road, area, city"></textarea>
+        </div>
+        <div style="grid-column: 1 / -1">
+          <label>Delivery area *</label>
+          <div class="payment-options" id="delivery-zone-options"></div>
+          <p class="field-hint" id="delivery-fee-hint"></p>
+        </div>
+        <div style="grid-column: 1 / -1">
+          <label>Payment method *</label>
+          <div class="payment-options">
+            <label><input type="radio" name="payment_method" value="cod" checked /> Cash on Delivery</label>
+            <label><input type="radio" name="payment_method" value="bkash" /> bKash</label>
+            <label><input type="radio" name="payment_method" value="nagad" /> Nagad</label>
+            <label><input type="radio" name="payment_method" value="rocket" /> Rocket</label>
+          </div>
+        </div>
+        <div style="grid-column: 1 / -1" id="wallet-panel" hidden>
+          <div class="alert" style="background: var(--accent-soft); border: 1px solid var(--border); color: var(--text)">
+            <strong id="wallet-label">Wallet</strong>
+            <p>Send payment to: <code id="wallet-number">—</code></p>
+          </div>
+          <label for="trx">Transaction ID / Reference *</label>
+          <input id="trx" name="transaction_ref" autocomplete="off" />
+        </div>
+        <div style="grid-column: 1 / -1">
+          <label for="coupon">Coupon code</label>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-end">
+            <input id="coupon" name="coupon_code" style="flex: 1; min-width: 12rem" autocomplete="off" />
+            <button type="button" class="btn btn-outline" id="btn-apply-coupon">Apply</button>
+          </div>
+          <p class="field-hint" id="coupon-msg"></p>
+        </div>
+        <div style="grid-column: 1 / -1">
+          <label for="cnotes">Order notes</label>
+          <textarea id="cnotes" name="order_notes" maxlength="2000" placeholder="Delivery instructions, etc."></textarea>
+        </div>
+        <div style="grid-column: 1 / -1" id="totals-breakdown"></div>
+        <button type="submit" class="btn btn-primary">Place order</button>
+      </form>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      await initLayout();
+    </script>
+    <script type="module" src="/js/checkout.js"></script>
+  </body>
+</html>

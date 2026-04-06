@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop — Online Medicine Store</title>
+    <meta name="description" content="Browse all medicines: tablets, syrups, baby care, personal care. Filter and search." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="shop" data-page-title="Shop">
+    <div id="site-header-placeholder"></div>
+    <main id="main" class="container section">
+      <h1>Shop</h1>
+      <p class="field-hint">Search with suggestions · filter by category</p>
+      <div class="toolbar">
+        <div class="search-wrap">
+          <input type="search" id="shop-search" placeholder="Search medicine name…" autocomplete="off" aria-label="Search medicines" />
+          <div id="search-suggestions" class="suggestions" role="listbox"></div>
+        </div>
+        <select id="category-filter" class="filter-select" aria-label="Category">
+          <option value="">Loading…</option>
+        </select>
+        <span id="shop-status" class="field-hint"></span>
+      </div>
+      <div class="grid-cards" id="shop-grid"></div>
+      <div id="shop-pagination" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem"></div>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      await initLayout();
+    </script>
+    <script type="module" src="/js/shop.js"></script>
+  </body>
+</html>

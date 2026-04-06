@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medicines — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Medicines</h1>
+        <h2>Add medicine</h2>
+        <form id="add-form" class="grid-form">
+          <div>
+            <label>Name</label>
+            <input name="name" required />
+          </div>
+          <div>
+            <label>Category</label>
+            <select name="category_id" id="med-cat" required></select>
+          </div>
+          <div>
+            <label>Price (BDT)</label>
+            <input name="price" type="number" step="0.01" required />
+          </div>
+          <div>
+            <label>Stock</label>
+            <input name="stock" type="number" required />
+          </div>
+          <div>
+            <label>Expiry (YYYY-MM-DD)</label>
+            <input name="expiry_date" type="date" />
+          </div>
+          <div>
+            <label>Image URL</label>
+            <input name="image_url" placeholder="https://..." />
+          </div>
+          <div style="grid-column: 1 / -1">
+            <label>Description</label>
+            <textarea name="description" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <div id="msg"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Expiry</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-medicines.js"></script>
+  </body>
+</html>

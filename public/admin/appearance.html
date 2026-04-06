@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Appearance — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Appearance &amp; checkout settings</h1>
+        <p class="field-hint" style="color: var(--a-muted)">Brand, tab title, footer text, wallets, delivery fees, WhatsApp.</p>
+        <div id="msg"></div>
+        <form id="settings-form" class="grid-form" style="max-width: 36rem">
+          <div>
+            <label>Brand name (header)</label>
+            <input name="brand_name" />
+          </div>
+          <div>
+            <label>Site title (browser tab)</label>
+            <input name="site_title" />
+          </div>
+          <div style="grid-column: 1 / -1">
+            <label>Footer description</label>
+            <textarea name="footer_description" rows="2"></textarea>
+          </div>
+          <div style="grid-column: 1 / -1">
+            <label>Footer address</label>
+            <input name="footer_address" />
+          </div>
+          <div>
+            <label>bKash number (display at checkout)</label>
+            <input name="wallet_bkash" />
+          </div>
+          <div>
+            <label>Nagad number</label>
+            <input name="wallet_nagad" />
+          </div>
+          <div>
+            <label>Rocket number</label>
+            <input name="wallet_rocket" />
+          </div>
+          <div>
+            <label>Inside Dhaka label</label>
+            <input name="delivery_label_inside" />
+          </div>
+          <div>
+            <label>Outside Dhaka label</label>
+            <input name="delivery_label_outside" />
+          </div>
+          <div>
+            <label>Inside Dhaka fee (BDT)</label>
+            <input name="delivery_fee_inside" type="number" step="0.01" />
+          </div>
+          <div>
+            <label>Outside Dhaka fee (BDT)</label>
+            <input name="delivery_fee_outside" type="number" step="0.01" />
+          </div>
+          <div>
+            <label>Low stock threshold</label>
+            <input name="low_stock_threshold" type="number" />
+          </div>
+          <div style="grid-column: 1 / -1">
+            <label>WhatsApp (digits, country code without +)</label>
+            <input name="whatsapp_number" placeholder="8801..." />
+          </div>
+          <button type="submit" class="btn btn-primary">Save settings</button>
+        </form>
+        <h2>Favicon &amp; logo</h2>
+        <p id="preview-fav"></p>
+        <p id="preview-logo"></p>
+        <form id="fav-form" class="grid-form" style="max-width: 24rem">
+          <input type="file" name="file" accept="image/*" required />
+          <button type="submit" class="btn btn-outline">Upload favicon</button>
+        </form>
+        <form id="logo-form" class="grid-form" style="max-width: 24rem">
+          <input type="file" name="file" accept="image/*" required />
+          <button type="submit" class="btn btn-outline">Upload header logo</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-appearance.js"></script>
+  </body>
+</html>

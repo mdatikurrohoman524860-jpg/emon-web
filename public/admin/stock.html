@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stock &amp; Expiry — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Stock &amp; expiry</h1>
+        <h2>Low stock (&lt; 10)</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Stock</th>
+                <th>Expiry</th>
+              </tr>
+            </thead>
+            <tbody id="low"></tbody>
+          </table>
+        </div>
+        <h2>Expiring within 90 days</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Stock</th>
+                <th>Expiry</th>
+              </tr>
+            </thead>
+            <tbody id="exp"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-stock.js"></script>
+  </body>
+</html>

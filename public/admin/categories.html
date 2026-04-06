@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Categories — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Product categories</h1>
+        <div id="msg"></div>
+        <form id="add" class="grid-form" style="max-width: 28rem">
+          <input name="name" placeholder="Name" required />
+          <textarea name="description" placeholder="Description" rows="2"></textarea>
+          <input name="sort_order" type="number" value="0" />
+          <button type="submit" class="btn btn-primary">Add category</button>
+        </form>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Slug</th>
+                <th>Sort</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-categories.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Footer — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Footer sections &amp; links</h1>
+        <div id="msg"></div>
+        <h2>New section</h2>
+        <form id="add-sec" class="grid-form" style="max-width: 24rem">
+          <input name="title" placeholder="Section title" required />
+          <input name="sort_order" type="number" value="0" />
+          <button type="submit" class="btn btn-primary">Add section</button>
+        </form>
+        <h2>New link</h2>
+        <form id="add-link" class="grid-form" style="max-width: 32rem">
+          <select name="section_id" id="sec-sel" required></select>
+          <input name="label" placeholder="Label" required />
+          <input name="url" placeholder="URL" required />
+          <input name="icon" placeholder="Icon (emoji optional)" />
+          <input name="sort_order" type="number" value="0" />
+          <button type="submit" class="btn btn-primary">Add link</button>
+        </form>
+        <div id="tables"></div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-footer.js"></script>
+  </body>
+</html>

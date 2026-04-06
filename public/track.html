@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Track Order — Online Medicine Store</title>
+    <meta name="description" content="Track your medicine order with reference and phone number." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="track" data-page-title="Track order">
+    <div id="site-header-placeholder"></div>
+    <main id="main" class="container section" style="max-width: 36rem">
+      <h1>Track order</h1>
+      <p class="field-hint">Enter the order reference (e.g. OMS…) and the phone number used at checkout.</p>
+      <form id="track-form" class="form-grid">
+        <div>
+          <label for="tr">Order reference *</label>
+          <input id="tr" name="ref" required placeholder="OMS…" autocomplete="off" />
+        </div>
+        <div>
+          <label for="tp">Phone *</label>
+          <input id="tp" name="phone" required placeholder="01XXXXXXXXX" />
+        </div>
+        <button type="submit" class="btn btn-primary">Track</button>
+      </form>
+      <div id="track-result"></div>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      await initLayout();
+    </script>
+    <script type="module" src="/js/track.js"></script>
+  </body>
+</html>

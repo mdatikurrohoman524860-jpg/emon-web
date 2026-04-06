@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online Medicine Store — Pharmacy eCommerce Bangladesh</title>
+    <meta
+      name="description"
+      content="Order medicines online in Bangladesh. Tablets, syrups, baby care, personal care. Cash on delivery, bKash, Nagad, Rocket. Upload prescription."
+    />
+    <meta name="keywords" content="pharmacy, medicine, Bangladesh, bKash, online medicine, prescription" />
+    <meta property="og:title" content="Online Medicine Store Bangladesh" />
+    <meta property="og:description" content="Trusted online pharmacy — COD & mobile wallets." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Pharmacy",
+        "name": "Online Medicine Store",
+        "url": "/",
+        "description": "Online pharmacy eCommerce serving Bangladesh with delivery and prescription upload.",
+        "areaServed": { "@type": "Country", "name": "Bangladesh" }
+      }
+    </script>
+  </head>
+  <body data-page="home">
+    <div id="site-header-placeholder"></div>
+    <main id="main">
+      <section class="hero-carousel-wrap" aria-label="Featured">
+        <div id="hero-carousel" class="hero-carousel"></div>
+      </section>
+      <section class="hero-cta section" style="padding-top: 1rem">
+        <div class="container hero-actions">
+          <a class="btn btn-primary" href="/shop">Shop medicines</a>
+          <a class="btn btn-outline" href="/offer">Offers</a>
+          <a class="btn btn-accent" href="/contact">Contact</a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Featured products</h2>
+          <div class="grid-cards" id="featured-grid">
+            <p>Loading…</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="background: var(--surface); border-block: 1px solid var(--border)">
+        <div class="container">
+          <h2 class="section-title">Why shop with us</h2>
+          <div class="grid-cards">
+            <div class="card">
+              <div class="card-body">
+                <h3>Fast search</h3>
+                <p class="field-hint">Live suggestions and category filters for quick checkout.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3>Local payments</h3>
+                <p class="field-hint">COD plus bKash, Nagad, and Rocket options at checkout.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3>Prescription upload</h3>
+                <p class="field-hint">Send a clear photo of your Rx for verification before dispensing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      import { initHome } from '/js/home.js';
+      await initLayout();
+      initHome();
+    </script>
+  </body>
+</html>

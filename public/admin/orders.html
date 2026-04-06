@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orders — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Orders</h1>
+        <p style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-end">
+          <label>Search <input type="search" id="search-q" placeholder="Ref, phone, name, product…" style="width: 14rem" /></label>
+          <label>Status
+            <select id="f-status">
+              <option value="">All</option>
+              <option value="pending">Pending</option>
+              <option value="processing">Processing</option>
+              <option value="shipped">Shipped</option>
+              <option value="delivered">Delivered</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </label>
+          <label>Payment
+            <select id="f-pay">
+              <option value="">All</option>
+              <option value="cod">COD</option>
+              <option value="bkash">bKash</option>
+              <option value="nagad">Nagad</option>
+              <option value="rocket">Rocket</option>
+            </select>
+          </label>
+          <button type="button" class="btn btn-primary" id="btn-search">Search</button>
+        </p>
+        <div id="msg"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ref</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Total</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <div id="detail" style="margin-top: 1.5rem"></div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-orders.js"></script>
+  </body>
+</html>

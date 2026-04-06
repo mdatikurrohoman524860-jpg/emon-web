@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slides — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Hero slides</h1>
+        <div id="msg"></div>
+        <form id="add" class="grid-form" style="max-width: 28rem" enctype="multipart/form-data">
+          <input type="file" name="image" accept="image/*" required />
+          <input name="title" placeholder="Title" required />
+          <textarea name="description" placeholder="Description" rows="2"></textarea>
+          <input name="link_url" placeholder="Optional link URL" />
+          <input name="sort_order" type="number" value="0" />
+          <label><input type="checkbox" name="is_enabled" checked /> Enabled</label>
+          <button type="submit" class="btn btn-primary">Add slide</button>
+        </form>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Title</th>
+                <th>Link</th>
+                <th>Order</th>
+                <th>On</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-slides.js"></script>
+  </body>
+</html>

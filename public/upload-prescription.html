@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upload Prescription — Online Medicine Store</title>
+    <meta name="description" content="Upload a clear photo of your prescription for verification." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="rx" data-page-title="Upload prescription">
+    <div id="site-header-placeholder"></div>
+    <main id="main" class="container section" style="max-width: 32rem">
+      <h1>Upload prescription</h1>
+      <p class="field-hint">
+        Accepted: JPEG, PNG, WebP, GIF (max 5MB). If you are not logged in, include your phone number so we can reach
+        you.
+      </p>
+      <div id="rx-msg"></div>
+      <form id="rx-form" class="form-grid" enctype="multipart/form-data">
+        <div>
+          <label for="rxp">Prescription image *</label>
+          <input id="rxp" type="file" name="prescription" accept="image/*" required />
+        </div>
+        <div>
+          <label for="rxph">Phone (if guest)</label>
+          <input id="rxph" name="guest_phone" placeholder="01XXXXXXXXX" />
+        </div>
+        <div>
+          <label for="rxn">Notes</label>
+          <textarea id="rxn" name="notes" maxlength="2000" placeholder="Doctor name, medicines requested…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      await initLayout();
+    </script>
+    <script type="module" src="/js/upload-prescription.js"></script>
+  </body>
+</html>

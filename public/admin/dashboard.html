@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard — Admin</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="admin-wrap">
+      <div id="nav-ph"></div>
+      <div class="admin-main">
+        <h1>Dashboard</h1>
+        <div id="low-banner"></div>
+        <div class="cards" id="stats"></div>
+        <h2>Finance</h2>
+        <div id="finance-empty" class="finance-empty-card" hidden></div>
+        <div class="cards" id="finance"></div>
+        <h2>Payment mix</h2>
+        <div class="table-wrap" style="max-width: 480px">
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Orders</th><th>Revenue</th></tr>
+            </thead>
+            <tbody id="pay-tbody"></tbody>
+          </table>
+        </div>
+        <h2>Revenue (last 7 days)</h2>
+        <div id="chart-wrap" class="chart-wrap-dash">
+          <canvas id="rev-chart" height="120" style="max-width: 640px"></canvas>
+        </div>
+        <h2>Categories</h2>
+        <div class="table-wrap" style="max-width: 520px">
+          <table>
+            <thead>
+              <tr><th>Category</th><th>Products</th></tr>
+            </thead>
+            <tbody id="cat-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/admin/js/admin-dashboard.js"></script>
+  </body>
+</html>

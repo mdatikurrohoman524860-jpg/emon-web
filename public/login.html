@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login / Register — Online Medicine Store</title>
+    <meta name="description" content="Customer account — optional for faster checkout." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="login" data-page-title="Account">
+    <div id="site-header-placeholder"></div>
+    <main id="main" class="container section" style="max-width: 28rem">
+      <h1>Account</h1>
+      <p class="field-hint">Optional — guest checkout works without an account. <a href="/my-orders">My orders</a> (when logged in).</p>
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
+        <button type="button" class="btn btn-outline btn-sm" data-tab="login" aria-selected="true">Login</button>
+        <button type="button" class="btn btn-ghost btn-sm" data-tab="register" aria-selected="false">Register</button>
+      </div>
+      <div id="auth-msg"></div>
+      <div class="auth-panel" data-panel="login">
+        <form id="login-form" class="form-grid">
+          <div>
+            <label for="le">Email</label>
+            <input id="le" name="email" type="email" required autocomplete="username" />
+          </div>
+          <div>
+            <label for="lp">Password</label>
+            <input id="lp" name="password" type="password" required autocomplete="current-password" />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+      <div class="auth-panel" data-panel="register" hidden>
+        <form id="register-form" class="form-grid">
+          <div>
+            <label for="rn">Name</label>
+            <input id="rn" name="name" required minlength="2" />
+          </div>
+          <div>
+            <label for="re">Email</label>
+            <input id="re" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label for="rp">Password</label>
+            <input id="rp" name="password" type="password" required minlength="6" autocomplete="new-password" />
+          </div>
+          <div>
+            <label for="rph">Phone</label>
+            <input id="rph" name="phone" placeholder="01XXXXXXXXX" />
+          </div>
+          <button type="submit" class="btn btn-primary">Create account</button>
+        </form>
+      </div>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      await initLayout();
+    </script>
+    <script type="module" src="/js/auth.js"></script>
+  </body>
+</html>

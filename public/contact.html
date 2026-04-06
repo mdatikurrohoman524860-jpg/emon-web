@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Online Medicine Store</title>
+    <meta name="description" content="Contact Online Medicine Store — Dhaka, Bangladesh." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="contact" data-page-title="Contact">
+    <div id="site-header-placeholder"></div>
+    <main id="main" class="container section" style="max-width: 32rem">
+      <h1>Contact us</h1>
+      <p>We typically reply within one business day.</p>
+      <div id="contact-msg"></div>
+      <form id="contact-form" class="form-grid">
+        <div>
+          <label for="cn">Name *</label>
+          <input id="cn" name="name" required minlength="2" />
+        </div>
+        <div>
+          <label for="ce">Email *</label>
+          <input id="ce" name="email" type="email" required />
+        </div>
+        <div>
+          <label for="cph">Phone</label>
+          <input id="cph" name="phone" />
+        </div>
+        <div>
+          <label for="cm">Message *</label>
+          <textarea id="cm" name="message" required minlength="10" maxlength="5000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </main>
+    <div id="site-footer-placeholder"></div>
+    <script type="module">
+      import { initLayout } from '/js/layout.js';
+      await initLayout();
+    </script>
+    <script type="module" src="/js/contact.js"></script>
+  </body>
+</html>
