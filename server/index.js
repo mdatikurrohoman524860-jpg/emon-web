@@ -146,6 +146,8 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`Online Medicine Store listening on http://localhost:${PORT}`);
+  console.log(`Online Medicine Store listening on port ${PORT}`);
 });
